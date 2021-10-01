@@ -5,7 +5,8 @@ RSpec.describe "books/edit", type: :view do
     @book = assign(:book, Book.create!(
       title: "MyString",
       author: "MyString",
-      price: 1.5
+      price: "1.5", 
+      date: "2021-09-30"
     ))
   end
 
@@ -19,6 +20,8 @@ RSpec.describe "books/edit", type: :view do
       assert_select "input[name=?]", "book[author]"
 
       assert_select "input[name=?]", "book[price]"
+
+      assert_select "input[name=?]", "book[date]"
     end
   end
 end

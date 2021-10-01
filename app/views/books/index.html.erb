@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Bad Library</h1>
+<h1>Books</h1>
 
 <table>
   <thead>
@@ -8,7 +8,7 @@
       <th>Title</th>
       <th>Author</th>
       <th>Price</th>
-      <th>Date</th>
+      <th>Date Published</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -22,7 +22,7 @@
         <td><%= book.date %></td>
         <td><%= link_to 'Show', book %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
-        <td><%= link_to('Delete', delete_book_path(book), :class=> "action delete") %></td>
+        <td><%= link_to('Delete', delete_book_path(book), :class=> 'action delete')%></td>
       </tr>
     <% end %>
   </tbody>

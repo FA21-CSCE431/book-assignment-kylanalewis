@@ -1,7 +1,12 @@
+<p id="notice"><%= notice %></p>
+
 <h1>Delete Book</h1>
 
-<p>Are you sure you want to permanently delete this book?</p>
+<h3>Are you sure you want to permanently delete this book?</h3>
+<%= link_to 'Delete', books_path, method: :delete %>
 
-<%= render 'form', book: @book %>
-
+<%= link_to 'Show', @book %>
 <%= link_to 'Back', books_path %>
+
+
+

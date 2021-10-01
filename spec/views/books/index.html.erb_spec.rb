@@ -6,14 +6,14 @@ RSpec.describe "books/index", type: :view do
       Book.create!(
         title: "Title",
         author: "Author",
-        price: "2.5",
-        date: "2021-09-30"
+        price: '2.5',
+        date: '1998-10-10'
       ),
       Book.create!(
         title: "Title",
         author: "Author",
-        price: "2.5",
-        date: "2021-09-30"
+        price: '2.5',
+        date: '1998-10-10'
       )
     ])
   end
@@ -22,7 +22,7 @@ RSpec.describe "books/index", type: :view do
     render
     assert_select "tr>td", text: "Title".to_s, count: 2
     assert_select "tr>td", text: "Author".to_s, count: 2
-    assert_select "tr>td", text: "2.5".to_s, count: 2
-    assert_select "tr>td", text: "2021-09-30".to_s, count: 2
+    assert_select "tr>td", text: 2.5.to_s, count: 2
+    assert_select "tr>td", text: '1998-10-10', count: 2
   end
 end

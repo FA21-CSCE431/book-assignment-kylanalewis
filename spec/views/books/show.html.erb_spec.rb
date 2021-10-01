@@ -5,8 +5,8 @@ RSpec.describe "books/show", type: :view do
     @book = assign(:book, Book.create!(
       title: "Title",
       author: "Author",
-      price: "2.5", 
-      date: "2021-09-30"
+      price: '2.5',
+      date: '1998-10-10'
     ))
   end
 
@@ -15,6 +15,6 @@ RSpec.describe "books/show", type: :view do
     expect(rendered).to match(/Title/)
     expect(rendered).to match(/Author/)
     expect(rendered).to match(/2.5/)
-    expect(rendered).to match(/2021-09-30/)
+    expect(rendered).to match(/1998-10-10/)
   end
 end
